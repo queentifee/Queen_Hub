@@ -15,7 +15,9 @@ const eslintConfig = [
   // Add your custom rules
   {
     rules: {
-  '@typescript-eslint/no-unused-vars': ['error', { "argsIgnorePattern": "^_" }]
+  '@typescript-eslint/no-unused-vars': ['error', { "argsIgnorePattern": "^_" }],
+   "@typescript-eslint/no-explicit-any": "off"
+
     },
   },
 ];

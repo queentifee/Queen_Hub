@@ -160,7 +160,7 @@ export async function updateAction(formData: FormData, id: string) {
       // Image processes
       const arrayBuffer = await image.arrayBuffer();
       const buffer = new Uint8Array(arrayBuffer);
-      const imageResponse: any = await new Promise((resolve, reject) => {
+      const imageResponse: any = await new Promise((resolve) => {
         cloudinary.uploader
           .upload_stream(
             {

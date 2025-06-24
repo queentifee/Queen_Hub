@@ -27,7 +27,7 @@ export async function addAction(formData: FormData){
 
 const arrayBuffer = await image.arrayBuffer();
 const buffer = new Uint8Array(arrayBuffer);
-const imageResponse: any = await new Promise((resolve, reject) => {
+const imageResponse: any = await new Promise((resolve) => {
    cloudinary.uploader
    .upload_stream(
       {
