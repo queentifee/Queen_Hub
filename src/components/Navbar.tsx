@@ -17,7 +17,7 @@ export default function Navbar() {
     router.push(`/search-page?${searchQuery} `)
   }
   return (
-<nav className='px-4 md:px-12 py-4 md:py-6 bg-amber-900'>
+<nav className='px-4 md:px-12 py-4 md:py-6 bg-[#fbbf95]'>
     <div className='flex justify-between items-center'>
         <Link href={"/"} className='hidden md:inline-block text-lg font-semibold'>QueenArtistry</Link>
         <div className='relative max-w-[300px] md:w-[400px]'>

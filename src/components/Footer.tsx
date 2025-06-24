@@ -2,8 +2,15 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer>
-        <p className='text-[#495057] text-sm text-center px-4 md:px-12 py-4 md:py-6'>Made with sooo much love ❤️❤️❤️ by Queen</p>
+    <footer >
+      <div className="col-span-full flex flex-col items-center py-3 bg-[#fbbf95] font-md  text-center">
+          <p>© 2025 QueensHub. All rights reserved.</p>
+          <br />
+          <p>
+            <a href="#" className="underline">Privacy Policy</a> | 
+            <a href="#" className="underline ml-2">Terms of Service</a>
+          </p>
+        </div>
     </footer>
   )
 }

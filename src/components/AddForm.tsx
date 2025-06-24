@@ -31,7 +31,7 @@ const AddForm = () => {
         if(file) {
             const fileSize = file.size;
 
-            if (Math.round(fileSize / 1024) > 1024) {
+            if (Math.round(fileSize / 2024) > 2024) {
                 toast.error ("image greater tham 1MB is not allowed");
 
             }else {
