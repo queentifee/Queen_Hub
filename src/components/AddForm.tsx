@@ -19,8 +19,8 @@ const AddForm = () => {
 
       if(success) {
         toast.success(success);
-        router.push('/');
-        setImageUrl('');
+        router.push("/");
+        setImageUrl("");
       }
 
     }
@@ -76,7 +76,7 @@ const AddForm = () => {
         </div>
         <div className='flex flex-col w-full'>
             <label>
-                Seller's Link:
+                Sellers Link:
             </label>
             <input type='text'  name='link' placeholder='Enter product link' className='w-fullnpx-3 py-1.5 md:py-2 text-[#252422] rounded-lg
              bg-white border-gray-500'/>

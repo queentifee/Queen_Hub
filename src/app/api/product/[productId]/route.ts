@@ -4,7 +4,7 @@ import cloudinary from "@/utils/cloudinary";
 
 
 export async function GET (
-    request: Request, 
+    _request: Request, 
     {params}: {params: Promise<{productId: string}> }
 
 ) {
@@ -19,13 +19,18 @@ export async function GET (
 
         return Response.json({product}, {status: 200});
 
-    } catch (error: any) {
-        return Response.json ({ message: error.message}, {status: 400});
-        
+    } catch (error: unknown) {
+
+    if (error instanceof Error) {
+         return Response.json({ message: error.message}, {status: 400})
+    } else {
+        console.log('Unexpected error:', error);
     }
+    
+}
 }
 
-export async function DELETE(request: Request,
+export async function DELETE(_request: Request,
     {params}: {params:Promise<{ productId: string }> }
 
 
@@ -56,8 +61,13 @@ try {
 
             return Response.json ({message: "Product deleted successfully"},
                  {status: 200})
-} catch (error: any) {
-    return Response.json({message: error.message}, {status: 400})
-    
+} catch (error: unknown) {
+
+    if (error instanceof Error) {
+         return Response.json({ message: error.message}, {status: 400})
+    } else {
+        console.log('Unexpected error:', error);
+    }
+   
 }
 };

@@ -1,7 +1,7 @@
 import { connectDB } from "../database/connectDB";
 import Product from "../models/product.model";
 
-export async function GET(request: Request) {
+export async function GET(_request: Request) {
     await connectDB();
 
     try {
@@ -10,10 +10,12 @@ export async function GET(request: Request) {
 
       return Response.json({products}, {status: 200} );
         
-    } catch (error: any) {
-        console.log("Error fetching products");
-
+     } catch (error: unknown) {
+    if (error instanceof Error) {
         return Response.json({ message: error.message}, {status: 400})
+    } else {
+        console.log('Unexpected error:', error);
+    }
         
     }
 }
