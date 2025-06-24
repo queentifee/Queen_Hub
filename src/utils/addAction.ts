@@ -34,11 +34,11 @@ const imageResponse: any = await new Promise((resolve, reject) => {
          resource_type: "auto",
          folder: "Queen_artistry"
       },
-      async (error, result) => {
-         if (error) {
-            return reject(error.message);
+      async ( result) => {
+         // if (error) {
+         //    return reject(error.message);
 
-         }
+         // }
          return resolve(result);
       }
    )
@@ -58,10 +58,15 @@ await Product.create({
 return {
    success: "Product added successfully"
 };
-   } catch (error) {
-      return {
-         error: "Something went wrong."
-      };
+   } catch (error: unknown) {
+  if (error instanceof Error) {
+    return {
+      error: error.message,
+    };
+  }
 
+  return {
+    error: "Something went wrong.",
+  };
    }
 }

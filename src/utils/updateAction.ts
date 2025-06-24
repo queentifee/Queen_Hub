@@ -167,10 +167,10 @@ export async function updateAction(formData: FormData, id: string) {
               resource_type: "auto",
               folder: "watches",
             },
-            async (error, result) => {
-              if (error) {
-                return reject(error.message);
-              }
+            async ( result) => {
+              // if (error) {
+              //   return reject(error.message);
+              // }
               return resolve(result);
             }
           )
@@ -193,9 +193,15 @@ export async function updateAction(formData: FormData, id: string) {
         success: "Product added successfully",
       };
     }
-  } catch (error) {
+ } catch (error: unknown) {
+  if (error instanceof Error) {
     return {
-      error: "Something went wrong.",
+      error: error.message,
     };
   }
+
+  return {
+    error: "Something went wrong.",
+  };
+}
 }
