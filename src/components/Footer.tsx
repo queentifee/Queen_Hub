@@ -3,7 +3,9 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer >
-      <div className="col-span-full flex flex-col items-center py-3 bg-[#fbbf95] font-md  text-center">
+      <div className="col-span-full flex flex-col items-center py-3  font-md  text-center">
+              <div className="mt-4 max-w-full h-px bg-gray-500 "></div> 
+
           <p>© 2025 QueensHub. All rights reserved.</p>
           <br />
           <p>

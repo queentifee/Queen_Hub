@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { EB_Garamond } from "next/font/google";
 import Footer from "@/components/Footer";
+import { ClerkProvider } from "@clerk/nextjs";
 import ToastProvider from "@/providers/ToastProvider";
 
 const ebGaramond = EB_Garamond({
@@ -24,11 +25,12 @@ export default function RootLayout({
     <html lang="en">
       <body
        className={ebGaramond.className}
-      >
+      ><ClerkProvider>
         <ToastProvider/>
          <Navbar/>
         {children}
         <Footer/>
+        </ClerkProvider>
       </body>
     </html>
   );

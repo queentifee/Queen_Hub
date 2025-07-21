@@ -25,7 +25,7 @@ const Images = () => {
  <div className="relative w-1/4 h-full group overflow-hidden rounded-md">
   {/* Background Image */}
   <Image
-    src="/bag8.jpg"
+    src="/unsplash.jpg"
     alt="Image 1"
     fill
     className="object-cover transition duration-300"
@@ -44,7 +44,7 @@ const Images = () => {
   <div className="relative w-1/4 h-full group overflow-hidden rounded-md">
   {/* Background Image */}
   <Image
-    src="/shoe9.jpg"
+    src="/unsplash8.jpg"
     alt="Image 1"
     fill
     className="object-cover transition duration-300"

@@ -2,7 +2,9 @@
 
 import { connectDB } from "@/app/api/database/connectDB";
 import cloudinary from "./cloudinary";
+import { UploadApiResponse } from "cloudinary";
 import Product from "@/app/api/models/product.model";
+
 
 export async function addAction(formData: FormData){
    try {
@@ -27,18 +29,22 @@ export async function addAction(formData: FormData){
 
 const arrayBuffer = await image.arrayBuffer();
 const buffer = new Uint8Array(arrayBuffer);
-const imageResponse: any = await new Promise((resolve) => {
+const imageResponse: UploadApiResponse = await new Promise((resolve, reject) => {
    cloudinary.uploader
    .upload_stream(
       {
          resource_type: "auto",
          folder: "Queen_artistry"
       },
-      async ( result) => {
-         // if (error) {
-         //    return reject(error.message);
+      async (error, result) => {
+         if (error) {
+            return reject(error);
 
-         // }
+         }
+
+         if(!result) {
+            return reject (new Error("image upload failed"))
+         }
          return resolve(result);
       }
    )

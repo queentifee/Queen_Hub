@@ -47,9 +47,9 @@ const AddForm = () => {
         (<Image
         src={imageUrl}
             alt="img"
-            width={1000}
-            height={1000}
-            className="max-w-full max-h-72 object-cover object-center rounded-lg"
+            width={200}
+            height={200}
+            className=" max-h-110 object-cover object-center rounded-md"
         
           />)}
         <div className='flex flex-col w-full'>
@@ -93,7 +93,7 @@ const AddForm = () => {
             rows={4}>
            </textarea>
         </div>
-        <button type='submit' className='w-full bg-amber-500 px-3 py-2 rounded-3xl cursor-pointer'>Add product</button>
+        <button type='submit' className='w-full mt-3 bg-amber-500 px-3 py-2 rounded-3xl cursor-pointer'>Add product</button>
     </form>
   )
 }
