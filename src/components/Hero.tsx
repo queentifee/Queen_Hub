@@ -57,7 +57,7 @@ export default function Hero() {
             className="object-cover transition duration-300"
           />
           <div className="absolute inset-0 flex px-3 flex-col items-start justify-center z-10 text-white text-center transition-opacity duration-300 group-hover:opacity-90 bg-gradient-to-t from-black/60 to-transparent">
-            <h1 className="text-xl font-semibold mb-3">Shop only the best offer on Queen's Hub</h1>
+            <h1 className="text-xl font-semibold mb-3">Shop only the best offer on Queen&rsquo;s Hub</h1>
             <button className="bg-orange-950 hover:bg-amber-600 px-2 text-lg rounded shadow">
               Shop Now
             </button>
