@@ -14,33 +14,33 @@ interface Product {
 
 }
 
-const staticProducts = [
-  {
-    _id: "1",
-    image: "/unsplash10-re.png",
-    name: "Shoe 9",
-    price: 49.99,
-  },
-  {
-    _id: "2",
-    image: "/6-remove.png",
-    name: "Bag 8",
-    price: 59.99,
-  },
-   {
-    _id: "3",
-    image: "/2-remove.png",
-    name: "Bag 8",
-    price: 59.99,
-  },
-  {
-    _id: "4",
-    image: "/shoe0.png",
-    name: "Shoe 10",
-    price: 69.99,
-  },
+// const staticProducts = [
+//   {
+//     _id: "1",
+//     image: "/unsplash10-re.png",
+//     name: "Shoe 9",
+//     price: 49.99,
+//   },
+//   {
+//     _id: "2",
+//     image: "/6-remove.png",
+//     name: "Bag 8",
+//     price: 59.99,
+//   },
+//    {
+//     _id: "3",
+//     image: "/2-remove.png",
+//     name: "Bag 8",
+//     price: 59.99,
+//   },
+//   {
+//     _id: "4",
+//     image: "/shoe0.png",
+//     name: "Shoe 10",
+//     price: 69.99,
+//   },
  
-];
+// ];
 
 const ProductList = () => {
     const [products, setProducts] = useState([]);
@@ -52,7 +52,7 @@ const ProductList = () => {
   return (
     <div id="product" className='bg-gray-50 px-4 md:px-12 py-5 md:py-10 flex justify-center items-center '>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
-       {products.slice(-4).map((product: Product, index) => (
+       {products.slice(-4).map((product: Product) => (
 <Link href={(`/product/${product._id}`)} key={product._id}>
 <div className='relative group w-[17rem] h-72 rounded-sm overflow-hidden border border-amber-300 '>
 <Image src={product.image}

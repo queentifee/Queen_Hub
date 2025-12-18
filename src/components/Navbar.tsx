@@ -2,8 +2,8 @@
 
 import React, { ChangeEvent } from 'react'
 import Link from 'next/link'
-import { Search, ShoppingBag, ShoppingCart, Plus } from 'lucide-react'
-import AuthSection from '@/app/auth';
+import { Search, ShoppingBag, Plus } from 'lucide-react'
+// import AuthSection from '@/app/auth';
 import { useRouter } from 'next/navigation'
 import { SignedIn } from '@clerk/nextjs';
 
