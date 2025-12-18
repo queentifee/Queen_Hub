@@ -93,7 +93,7 @@ const AddForm = () => {
             rows={4}>
            </textarea>
         </div>
-        <button type='submit' className='w-full mt-3 bg-amber-500 px-3 py-2 rounded-3xl cursor-pointer'>Add product</button>
+        <button type='submit' className=' mt-3 bg-gray-500 px-3 py-2 rounded-2xl cursor-pointer hover:text-green-50'>Add product</button>
     </form>
   )
 }

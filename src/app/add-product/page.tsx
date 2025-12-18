@@ -18,7 +18,7 @@ const AddProductPage = () => {
           />
         </div>
         {/* Right: Form */}
-        <div className="w-full md:w-1/2  flex items-center justify-center bg-amber-100 p-6">
+        <div className="w-full md:w-1/2  flex items-center justify-center bg-gray-100 p-6">
           <AddForm />
         </div>
       </div>
