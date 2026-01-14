@@ -47,20 +47,20 @@ const ProductPage = () => {
         &larr; Back
       </p>
 
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center md:space-x-10">
+      <div className="w-full  flex flex-row gap-4 md:gap-10 items-start">
         <Image
           src={product.image}
           alt="img"
           width={1000}
           height={1000}
-          className="max-w-full md:max-w-xl md:min-w-[30rem] min-h-[28rem] max-h-[28rem] object-cover object-center basis-1/2"
-        />
+          className="w-full h-[220px] sm:h-[260px] md:h-[500px] object-cover basis-1/2" />
+        
 
         <div className="basis-1/2 py-8">
           <div className="flex justify-between items-center">
             <h2 className="text-2xl">{product.name}</h2>
 
-            <div className="text-2xl font-bold -mt-2 relative">
+            {/* <div className="text-2xl font-bold -mt-2 relative">
               <span
                 onClick={() => setOpen(!open)}
                 className="cursor-pointer tracking-widest"
@@ -81,21 +81,28 @@ const ProductPage = () => {
                   </p>
                 </div>
               )}
-            </div>
+            </div> */}
           </div>
 
-          <h3 className="text-3xl font-semibold mt-3">${product.price}</h3>
+  <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-1">
+    ${product.price}
+  </h3>
 
-          <Link href={product.link} target="_blank">
-            <button className="mt-8 bg-[#212529] hover:bg-[#343A40] text-white px-3 py-2 w-full font-semibold">
-              Contact Seller
-            </button>
-          </Link>
+  <Link href={product.link} target="_blank">
+    <button className="mt-4 md:mt-8 bg-[#212529] hover:bg-[#343A40] text-white px-3 py-2 w-full font-semibold">
+      Contact Seller
+    </button>
+  </Link>
 
-          <p className="font-semibold mt-10 text-lg">Description</p>
-          <p className="mt-1">{product.description}</p>
-        </div>
-      </div>
+  <p className="font-semibold mt-6 md:mt-10 text-base md:text-lg">
+    Description
+  </p>
+  <p className="mt-1 text-sm md:text-base">
+    {product.description}
+  </p>
+</div>
+</div>
+
 
       <h2 className="w-full text-2xl font-semibold pt-20">
         You might also like

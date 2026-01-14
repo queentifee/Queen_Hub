@@ -2,9 +2,6 @@
 
 import React from 'react'
 
-
-
-
 const Newsletter = () => {
   return (
     <div className='bg-gray-100 py-12 px-4'>
@@ -13,9 +10,6 @@ const Newsletter = () => {
         <h1 className=' text-amber-700  text-3xl font-bold'  >Newsletter</h1>
 
         <h1 className='text-4xl font-black mt-2'>SignUp & get 20% off</h1>
-
-        <p className='text-2xl item-center justify-center text-center mt-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
 
             <form className='flex items-center mt-4 w-full max-w-md'>

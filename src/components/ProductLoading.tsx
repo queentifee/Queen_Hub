@@ -7,7 +7,7 @@ export default function ProductLoadingState () {
             <div className="text-center">
                 <div className="relative inline-block">
                     <div className="animate-pulse">
-                        <ShoppingBag className="w-16 h-16 text-amber-400" strokeWidth={2}/>
+                        <ShoppingBag className="w-16 h-16 text-amber-200" strokeWidth={2}/>
                     </div>
 
                     <div className="absolute inset-0 -z-10">
