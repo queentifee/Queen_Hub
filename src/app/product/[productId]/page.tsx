@@ -20,16 +20,16 @@ interface Product {
 
 const ProductPage = () => {
   const router = useRouter();
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   const params = useParams();
   const [product, setProduct] = useState<Product>();
 
-  const handleDelete = async () => {
-    const response = await axios.delete(`/api/product/${params.productId}`);
+  // const handleDelete = async () => {
+  //   const response = await axios.delete(`/api/product/${params.productId}`);
 
-    toast.success(response.data.message);
-    router.push("/");
-  };
+  //   toast.success(response.data.message);
+  //   router.push("/");
+  // };
 
   useEffect(() => {
     axios
